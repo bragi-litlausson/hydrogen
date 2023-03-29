@@ -2,7 +2,73 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
              x:Class="Hydrogen.Views.HorizontalMenuView">
-    Welcome to Avalonia!
+    <Grid RowDefinitions="6*, 2*, *" ColumnDefinitions="*"
+          Background="{DynamicResource DarkBrush}">
+        
+        <!-- Content -->
+        <Grid Grid.Column="0" Grid.Row="1"
+              RowDefinitions="*, *"
+              ColumnDefinitions="*, 10*, *">
+            <!-- Title -->
+            <Viewbox Grid.Column="1" Grid.Row="0"
+                     HorizontalAlignment="Left">
+                <TextBlock Name="Title"
+                           Foreground="{DynamicResource PrimaryBrush}">
+                    Hydrogen
+                </TextBlock>
+            </Viewbox>
+
+            <Grid Name="Options" 
+                Grid.Column="1" Grid.Row="1"
+                  ColumnDefinitions="2*, *, 2*, *, 2*, *, 2*, *">
+                <!-- REMOVE LATER -->
+                <!-- Option Button -->
+                <Grid Grid.Row="0" Grid.Column="0"
+                      RowDefinitions="*, 2*, *">
+                    <Viewbox Grid.Column="1" Grid.Row="1"
+                             HorizontalAlignment="Left">
+                        <TextBlock 
+                                   Foreground="{DynamicResource Primary50Brush}">
+                            Hydrogen
+                        </TextBlock>
+                    </Viewbox>
+                </Grid>
+                <!-- Option Button -->
+                <Grid Grid.Row="0" Grid.Column="2"
+                      RowDefinitions="*, 2*, *">
+                    <Viewbox Grid.Column="1" Grid.Row="1"
+                             HorizontalAlignment="Left">
+                        <TextBlock
+                                   Foreground="{DynamicResource Primary50Brush}">
+                            Hydrogen
+                        </TextBlock>
+                    </Viewbox>
+                </Grid>
+                <!-- Option Button -->
+                <Grid Grid.Row="0" Grid.Column="4"
+                      RowDefinitions="*, 2*, *">
+                    <Viewbox Grid.Column="1" Grid.Row="1"
+                             HorizontalAlignment="Left">
+                        <TextBlock
+                                   Foreground="{DynamicResource Primary50Brush}">
+                            Hydrogen
+                        </TextBlock>
+                    </Viewbox>
+                </Grid>
+                <!-- Option Button -->
+                <Grid Grid.Row="0" Grid.Column="6"
+                      RowDefinitions="*, 2*, *">
+                    <Viewbox Grid.Column="1" Grid.Row="1"
+                             HorizontalAlignment="Left">
+                        <TextBlock Name="Option"
+                                   Foreground="{DynamicResource Primary50Brush}">
+                            Hydrogen
+                        </TextBlock>
+                    </Viewbox>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
 </UserControl>

@@ -1,12 +1,13 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="using:Hydrogen"
+             xmlns:hydrogen="clr-namespace:Hydrogen"
              x:Class="Hydrogen.App"
              RequestedThemeVariant="Default">
     <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.DataTemplates>
-        <local:ViewLocator />
+        <hydrogen:ViewLocator/>
     </Application.DataTemplates>
 
     <Application.Resources>
@@ -15,4 +16,15 @@
         <SolidColorBrush x:Key="Primary75Brush">#8DAAB7</SolidColorBrush>
         <SolidColorBrush x:Key="Primary50Brush">#61737B</SolidColorBrush>
     </Application.Resources>
+    
+    <Application.Styles>
+        <FluentTheme />
+    </Application.Styles>
 </Application>
+
+    <!--<Application.Resources>
+        <SolidColorBrush x:Key="DarkBrush">#0B0505</SolidColorBrush>
+        <SolidColorBrush x:Key="PrimaryBrush">#B8E1F2</SolidColorBrush>
+        <SolidColorBrush x:Key="Primary75Brush">#8DAAB7</SolidColorBrush>
+        <SolidColorBrush x:Key="Primary50Brush">#61737B</SolidColorBrush>
+    </Application.Resources>-->
