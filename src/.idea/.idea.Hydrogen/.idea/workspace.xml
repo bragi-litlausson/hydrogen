@@ -8,12 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cfe2f66-4dd1-4128-bccf-114a5f71af8c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Hydrogen/View/MapView.axaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hydrogen/View/MapView.axaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hydrogen/View/VerticalMenuView.axaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hydrogen/View/VerticalMenuView.axaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hydrogen/App.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/App.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hydrogen.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +76,7 @@
       <updated>1680026007167</updated>
       <workItem from="1680026008742" duration="15376000" />
       <workItem from="1680092062959" duration="176000" />
+      <workItem from="1680092500474" duration="708000" />
     </task>
     <servers />
   </component>
