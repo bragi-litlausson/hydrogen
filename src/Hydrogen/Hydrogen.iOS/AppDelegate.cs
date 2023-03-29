@@ -1,3 +1,7 @@
+using Avalonia;
+using Avalonia.iOS;
+using Foundation;
+
 namespace Hydrogen.iOS;
 
 // The UIApplicationDelegate for the application. This class is responsible for launching the 
@@ -8,6 +12,6 @@ public partial class AppDelegate : AvaloniaAppDelegate<App>
 {
     protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
     {
-        return builder.UseReactiveUI();
+        return builder;
     }
 }

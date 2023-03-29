@@ -7,14 +7,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <WasmExtraFilesToDeploy Include="AppBundle\**"/>
+        <WasmExtraFilesToDeploy Include="AppBundle\**" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Avalonia.Browser" Version="$(AvaloniaVersion)"/>
+        <PackageReference Include="Avalonia.Browser" Version="11.0.0-preview6" />
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Hydrogen\Hydrogen.csproj"/>
+        <ProjectReference Include="..\Hydrogen\Hydrogen.csproj" />
     </ItemGroup>
 </Project>

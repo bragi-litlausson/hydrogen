@@ -11,7 +11,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cfe2f66-4dd1-4128-bccf-114a5f71af8c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/avalonia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/avalonia.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen.Android/MainActivity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen.Android/MainActivity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen.Android/SplashActivity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen.Android/SplashActivity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen.Browser/Hydrogen.Browser.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen.Browser/Hydrogen.Browser.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen.Browser/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen.Browser/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen.Desktop/Hydrogen.Desktop.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen.Desktop/Hydrogen.Desktop.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen.iOS/AppDelegate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen.iOS/AppDelegate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen.iOS/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen.iOS/Main.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen/App.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen/App.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen/Hydrogen.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen/Hydrogen.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen/ViewLocator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen/ViewLocator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen/Views/HorizontalMenuView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen/Views/HorizontalMenuView.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen/Views/MainView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen/Views/MainView.axaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen/Views/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen/Views/MainWindow.axaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +38,7 @@
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="Toolset" />
+    <option name="selectedTabId" value="SWEA" />
   </component>
   <component name="ProjectId" id="2NeYRUwtj4jfzoVNWC9i3Zgpe5w" />
   <component name="ProjectLevelVcsManager">
@@ -33,25 +48,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/bragi/workspace/hydrogen/src/Hydrogen.sln",
+    "nodejs_package_manager_path": "npm",
+    "rider.run.widget.enabled.cache": "false",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/bragi/Library/Application Support/JetBrains/Rider2022.3/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/bragi/Library/Application Support/JetBrains/Rider2022.3/resharper-host/SourcesCache&quot;,
-      &quot;/Users/bragi/.local/share/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/bragi/Library/Application Support/JetBrains/Rider2022.3/resharper-host/DecompilerCache",
+      "/Users/bragi/Library/Application Support/JetBrains/Rider2022.3/resharper-host/SourcesCache",
+      "/Users/bragi/.local/share/Symbols/src"
     ]
   }
-}</component>
-  <component name="RunManager" selected=".NET Project.Hydrogen">
+}]]></component>
+  <component name="RunManager" selected=".NET Project.Hydrogen.Desktop">
     <configuration name="Hydrogen" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -126,6 +142,9 @@
       <workItem from="1680107114057" duration="20000" />
       <workItem from="1680107143412" duration="662000" />
       <workItem from="1680107853038" duration="92000" />
+      <workItem from="1680115883582" duration="860000" />
+      <workItem from="1680126904738" duration="1167000" />
+      <workItem from="1680129021910" duration="3288000" />
     </task>
     <servers />
   </component>
