@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Hydrogen/App.axaml" value="Hydrogen/Hydrogen.csproj" />
+        <entry key="Hydrogen/View/HorizontalMenuView.axaml" value="Hydrogen/Hydrogen.csproj" />
+        <entry key="Hydrogen/View/MapView.axaml" value="Hydrogen/Hydrogen.csproj" />
+        <entry key="Hydrogen/View/VerticalMenuView.axaml" value="Hydrogen/Hydrogen.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
