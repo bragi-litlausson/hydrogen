@@ -6,7 +6,7 @@
              x:Class="Hydrogen.Views.HorizontalMenuView">
     <Grid RowDefinitions="6*, 2*, *" ColumnDefinitions="*"
           Background="{DynamicResource DarkBrush}">
-        
+
         <!-- Content -->
         <Grid Grid.Column="0" Grid.Row="1"
               RowDefinitions="*, *"
@@ -15,13 +15,14 @@
             <Viewbox Grid.Column="1" Grid.Row="0"
                      HorizontalAlignment="Left">
                 <TextBlock Name="Title"
+                           FontFamily="{DynamicResource BoldFont}"
                            Foreground="{DynamicResource PrimaryBrush}">
                     Hydrogen
                 </TextBlock>
             </Viewbox>
 
-            <Grid Name="Options" 
-                Grid.Column="1" Grid.Row="1"
+            <Grid Name="Options"
+                  Grid.Column="1" Grid.Row="1"
                   ColumnDefinitions="2*, *, 2*, *, 2*, *, 2*, *">
                 <!-- REMOVE LATER -->
                 <!-- Option Button -->
@@ -29,9 +30,10 @@
                       RowDefinitions="*, 2*, *">
                     <Viewbox Grid.Column="1" Grid.Row="1"
                              HorizontalAlignment="Left">
-                        <TextBlock 
-                                   Foreground="{DynamicResource Primary50Brush}">
-                            Hydrogen
+                        <TextBlock
+                            FontFamily="{DynamicResource RegularFont}"
+                            Foreground="{DynamicResource Primary50Brush}">
+                            Hydrogen@
                         </TextBlock>
                     </Viewbox>
                 </Grid>
@@ -41,8 +43,8 @@
                     <Viewbox Grid.Column="1" Grid.Row="1"
                              HorizontalAlignment="Left">
                         <TextBlock
-                                   Foreground="{DynamicResource Primary50Brush}">
-                            Hydrogen
+                            Foreground="{DynamicResource Primary50Brush}">
+                            Hydrogen@
                         </TextBlock>
                     </Viewbox>
                 </Grid>
@@ -52,7 +54,7 @@
                     <Viewbox Grid.Column="1" Grid.Row="1"
                              HorizontalAlignment="Left">
                         <TextBlock
-                                   Foreground="{DynamicResource Primary50Brush}">
+                            Foreground="{DynamicResource Primary50Brush}">
                             Hydrogen
                         </TextBlock>
                     </Viewbox>

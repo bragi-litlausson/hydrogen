@@ -13,11 +13,7 @@
     <list default="true" id="6cfe2f66-4dd1-4128-bccf-114a5f71af8c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen/App.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen/App.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen/Hydrogen.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen/Hydrogen.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen/ViewLocator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen/ViewLocator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen/Views/HorizontalMenuView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen/Views/HorizontalMenuView.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen/Views/MainView.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen/Views/MainView.axaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen/Views/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen/Views/MainWindow.axaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +131,7 @@
       <workItem from="1680107853038" duration="92000" />
       <workItem from="1680115883582" duration="860000" />
       <workItem from="1680126904738" duration="1167000" />
-      <workItem from="1680129021910" duration="3558000" />
+      <workItem from="1680129021910" duration="4600000" />
     </task>
     <servers />
   </component>

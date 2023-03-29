@@ -15,6 +15,10 @@
         <SolidColorBrush x:Key="PrimaryBrush">#B8E1F2</SolidColorBrush>
         <SolidColorBrush x:Key="Primary75Brush">#8DAAB7</SolidColorBrush>
         <SolidColorBrush x:Key="Primary50Brush">#61737B</SolidColorBrush>
+        
+        <FontFamily x:Key="RegularFont">avares://Hydrogen/Assets/Fonts/MonoRegular.ttf#BlexMono Nerd Font Mono</FontFamily>
+        <FontFamily x:Key="MediumFont">avares://Hydrogen/Assets/Fonts/MonoMedium.ttf#BlexMono Nerd Font Mono</FontFamily>
+        <FontFamily x:Key="BoldFont">avares://Hydrogen/Assets/Fonts/MonoBold.ttf#BlexMono Nerd Font Mono</FontFamily>
     </Application.Resources>
     
     <Application.Styles>
