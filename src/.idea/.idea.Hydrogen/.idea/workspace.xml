@@ -11,21 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cfe2f66-4dd1-4128-bccf-114a5f71af8c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/avalonia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/avalonia.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hydrogen.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hydrogen/App.axaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hydrogen/App.axaml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hydrogen/Assets/avalonia-logo.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hydrogen/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hydrogen/ViewLocator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hydrogen/ViewModels/MainWindowViewModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hydrogen/ViewModels/ViewModelBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hydrogen/Views/MainWindow.axaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hydrogen/Views/MainWindow.axaml.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hydrogen/app.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen/App.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen/App.axaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
