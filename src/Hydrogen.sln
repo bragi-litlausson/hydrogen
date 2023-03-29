@@ -1,6 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydrogen", "Hydrogen\Hydrogen.csproj", "{FB400D47-F8E0-4088-82E8-AD28FFECF5DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydrogen", "Hydrogen\Hydrogen\Hydrogen.csproj", "{30702FE7-739D-4FF8-9303-A8CF48C6E765}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydrogen.Android", "Hydrogen\Hydrogen.Android\Hydrogen.Android.csproj", "{5539AEEA-0996-42B0-8475-C9810316D835}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydrogen.Desktop", "Hydrogen\Hydrogen.Desktop\Hydrogen.Desktop.csproj", "{F4C80288-AC6F-4EA9-BBD5-7EE8936E2ED9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydrogen.iOS", "Hydrogen\Hydrogen.iOS\Hydrogen.iOS.csproj", "{2A8E91F5-D053-41CA-9F03-26319DF35678}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hydrogen.Browser", "Hydrogen\Hydrogen.Browser\Hydrogen.Browser.csproj", "{AA428A8A-22DB-44DB-9355-8DB6691A9576}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +16,25 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FB400D47-F8E0-4088-82E8-AD28FFECF5DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB400D47-F8E0-4088-82E8-AD28FFECF5DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB400D47-F8E0-4088-82E8-AD28FFECF5DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB400D47-F8E0-4088-82E8-AD28FFECF5DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30702FE7-739D-4FF8-9303-A8CF48C6E765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30702FE7-739D-4FF8-9303-A8CF48C6E765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30702FE7-739D-4FF8-9303-A8CF48C6E765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30702FE7-739D-4FF8-9303-A8CF48C6E765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5539AEEA-0996-42B0-8475-C9810316D835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5539AEEA-0996-42B0-8475-C9810316D835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5539AEEA-0996-42B0-8475-C9810316D835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5539AEEA-0996-42B0-8475-C9810316D835}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4C80288-AC6F-4EA9-BBD5-7EE8936E2ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4C80288-AC6F-4EA9-BBD5-7EE8936E2ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4C80288-AC6F-4EA9-BBD5-7EE8936E2ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4C80288-AC6F-4EA9-BBD5-7EE8936E2ED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A8E91F5-D053-41CA-9F03-26319DF35678}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A8E91F5-D053-41CA-9F03-26319DF35678}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A8E91F5-D053-41CA-9F03-26319DF35678}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A8E91F5-D053-41CA-9F03-26319DF35678}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA428A8A-22DB-44DB-9355-8DB6691A9576}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA428A8A-22DB-44DB-9355-8DB6691A9576}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA428A8A-22DB-44DB-9355-8DB6691A9576}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA428A8A-22DB-44DB-9355-8DB6691A9576}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

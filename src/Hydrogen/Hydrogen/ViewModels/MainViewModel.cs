@@ -1,6 +1,6 @@
 ﻿namespace Hydrogen.ViewModels;
 
-public class MainWindowViewModel : ViewModelBase
+public class MainViewModel : ViewModelBase
 {
     public string Greeting => "Welcome to Avalonia!";
 }
