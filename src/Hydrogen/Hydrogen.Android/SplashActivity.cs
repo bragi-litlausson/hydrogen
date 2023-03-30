@@ -1,4 +1,9 @@
-﻿using Application = Android.App.Application;
+﻿using Android.App;
+using Android.Content;
+using Android.OS;
+using Avalonia;
+using Avalonia.Android;
+using Application = Android.App.Application;
 
 namespace Hydrogen.Android;
 
@@ -7,8 +12,7 @@ public class SplashActivity : AvaloniaSplashActivity<App>
 {
     protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
     {
-        return base.CustomizeAppBuilder(builder)
-            .UseReactiveUI();
+        return base.CustomizeAppBuilder(builder);
     }
 
     protected override void OnCreate(Bundle? savedInstanceState)
