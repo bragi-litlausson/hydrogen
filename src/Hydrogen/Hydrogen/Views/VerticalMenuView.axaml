@@ -2,54 +2,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:templatedControls="clr-namespace:Hydrogen.TemplatedControls"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
              x:Class="Hydrogen.Views.VerticalMenuView">
     <Grid ColumnDefinitions="4*, 4*, 4*" RowDefinitions="*, 10*, *"
           Background="{DynamicResource DarkBrush}">
 
         <!-- Content -->
-        <StackPanel Grid.Column="1" Grid.Row="1"
-                    Orientation="Vertical" VerticalAlignment="Center">
-            <!-- Title -->
-            <Viewbox>
-                <TextBlock
-                    Foreground="{DynamicResource PrimaryBrush}"
-                    FontFamily="{DynamicResource BoldFont}">
-                    Hydrogen
-                </TextBlock>
+        <Grid Grid.Column="1" Grid.Row="1"
+              RowDefinitions="3* ,2*, 2*, 2*, 2*, 2*, 2*">
+            <Viewbox Grid.Row="0" 
+                     Stretch="Uniform">
+                <TextBlock Text="Title"
+                       Foreground="{DynamicResource PrimaryBrush}"
+                       FontFamily="{DynamicResource BoldFont}" />
             </Viewbox>
-
-            <!-- Options -->
-            <StackPanel Margin="24">
-                <Viewbox>
-                    <TextBlock
-                        FontFamily="{DynamicResource RegularFont}"
-                        Foreground="{DynamicResource Primary50Brush}">
-                        Hydrogen
-                    </TextBlock>
-                </Viewbox>
-                <Viewbox>
-                    <TextBlock
-                        FontFamily="{DynamicResource RegularFont}"
-                        Foreground="{DynamicResource Primary50Brush}">
-                        Hydrogen
-                    </TextBlock>
-                </Viewbox>
-                <Viewbox>
-                    <TextBlock
-                        FontFamily="{DynamicResource RegularFont}"
-                        Foreground="{DynamicResource Primary50Brush}">
-                        Hydrogen
-                    </TextBlock>
-                </Viewbox>
-                <Viewbox>
-                    <TextBlock
-                        FontFamily="{DynamicResource RegularFont}"
-                        Foreground="{DynamicResource Primary50Brush}">
-                        Hydrogen
-                    </TextBlock>
-                </Viewbox>
-            </StackPanel>
-        </StackPanel>
+            <Viewbox Grid.Row="1"
+                     Stretch="Uniform">
+                <templatedControls:MenuButtonControl Grid.Row="2" />
+            </Viewbox>
+            <Viewbox Grid.Row="2"
+                     Stretch="Uniform">
+                <templatedControls:MenuButtonControl Grid.Row="2" />
+            </Viewbox>
+            <Viewbox Grid.Row="3"
+                     Stretch="Uniform">
+                <templatedControls:MenuButtonControl Grid.Row="2" />
+            </Viewbox>
+            <Viewbox Grid.Row="4"
+                     Stretch="Uniform">
+                <templatedControls:MenuButtonControl Grid.Row="2" />
+            </Viewbox>
+        </Grid>
     </Grid>
 </UserControl>

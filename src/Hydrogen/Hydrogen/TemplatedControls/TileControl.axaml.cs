@@ -1,5 +1,4 @@
 using Avalonia;
-using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 using Avalonia.Media;
 
@@ -7,10 +6,6 @@ namespace Hydrogen.TemplatedControls;
 
 public sealed class TileControl : TemplatedControl
 {
-    public TileControl()
-    {
-        var t =new  TextBlock();
-    }
     #region Template Properties
     public static readonly StyledProperty<double> TileSizeProperty = AvaloniaProperty.Register<TileControl, double>(
         nameof(TileSize), 40);

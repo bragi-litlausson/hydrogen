@@ -8,5 +8,5 @@
         x:Class="Hydrogen.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="Hydrogen">
-        <views:GameView/>
+        <views:VerticalMenuView/>
 </Window>
