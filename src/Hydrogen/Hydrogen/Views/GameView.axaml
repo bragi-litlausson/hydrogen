@@ -2,16 +2,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:templatedControls="clr-namespace:Hydrogen.TemplatedControls"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
              x:Class="Hydrogen.Views.GameView">
     <Grid ColumnDefinitions="9*, 3*" Background="{DynamicResource DarkBrush}">
         <!-- Main Content -->
         <Grid Grid.Column="0" RowDefinitions="7*, 2*">
-            
+
             <!-- Insert map here -->
-            
-            <Border Grid.Row="1" 
-                    BorderThickness="0 1 0 0" 
+            <Grid RowDefinitions="*, *">
+                <templatedControls:TileControl
+                    TileSize="40"
+                    ForegroundOpacity="0.0"
+                    ActorGlyph="#" />
+                <templatedControls:TileControl
+                    Grid.Row="1"
+                    TileSize="20"
+                    ForegroundOpacity="0.0"
+                    ActorGlyph="#" />
+            </Grid>
+            <Border Grid.Row="1"
+                    BorderThickness="0 1 0 0"
                     BorderBrush="{DynamicResource Primary50Brush}">
             </Border>
         </Grid>

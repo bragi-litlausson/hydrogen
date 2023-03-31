@@ -1,0 +1,34 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:Hydrogen.TemplatedControls">
+    <Design.PreviewWith>
+        <controls:TileControl />
+    </Design.PreviewWith>
+
+    <Style Selector="controls|TileControl">
+        <!-- Set Defaults -->
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid Width="{TemplateBinding TileSize}" 
+                      Height="{TemplateBinding TileSize}" 
+                      Background="{TemplateBinding BackgroundLayerBrush}"
+                      ColumnDefinitions="*" RowDefinitions="*">
+                    <!-- Actor -->
+                    <Viewbox Stretch="Uniform">
+                        <TextBlock
+                            Foreground="{TemplateBinding ActorBrush}"
+                            Text="{TemplateBinding ActorGlyph}"/>
+                    </Viewbox>
+                    
+                    <!-- Foreground -->
+                    <Viewbox Stretch="Fill">
+                        <TextBlock Foreground = "" 
+                                   Background="{TemplateBinding ForegroundLayerBrush}" 
+                                   Text=" " 
+                                   Opacity="{TemplateBinding ForegroundOpacity}"/>
+                    </Viewbox>
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>
