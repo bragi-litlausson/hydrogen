@@ -23,5 +23,6 @@
     
     <Application.Styles>
         <FluentTheme />
+        <StyleInclude Source="avares://Hydrogen/TemplatedControls/TileControl.axaml"></StyleInclude>
     </Application.Styles>
 </Application>
