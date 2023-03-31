@@ -5,6 +5,7 @@
       <map>
         <entry key="Hydrogen/App.axaml" value="Hydrogen/Hydrogen.csproj" />
         <entry key="Hydrogen/Hydrogen/App.axaml" value="Hydrogen/Hydrogen.Desktop/Hydrogen.Desktop.csproj" />
+        <entry key="Hydrogen/Hydrogen/Views/GameViewLayout.axaml" value="Hydrogen/Hydrogen.Desktop/Hydrogen.Desktop.csproj" />
         <entry key="Hydrogen/Hydrogen/Views/HorizontalMenuView.axaml" value="Hydrogen/Hydrogen.Desktop/Hydrogen.Desktop.csproj" />
         <entry key="Hydrogen/Hydrogen/Views/MainView.axaml" value="Hydrogen/Hydrogen.Desktop/Hydrogen.Desktop.csproj" />
         <entry key="Hydrogen/Hydrogen/Views/MainWindow.axaml" value="Hydrogen/Hydrogen.Desktop/Hydrogen.Desktop.csproj" />
