@@ -11,8 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cfe2f66-4dd1-4128-bccf-114a5f71af8c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen/Views/VerticalMenuView.axaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen/Views/VerticalMenuView.axaml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen/Views/GameView.axaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen/Views/GameView.axaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/avalonia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/avalonia.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Hydrogen/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hydrogen/Hydrogen/Views/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/Hydrogen/Hydrogen/Views/MainWindow.axaml" afterDir="false" />
