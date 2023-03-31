@@ -1,6 +1,5 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="using:Hydrogen"
              xmlns:hydrogen="clr-namespace:Hydrogen"
              x:Class="Hydrogen.App"
              RequestedThemeVariant="Default">
@@ -24,5 +23,6 @@
     <Application.Styles>
         <FluentTheme />
         <StyleInclude Source="avares://Hydrogen/TemplatedControls/TileControl.axaml"></StyleInclude>
+        <StyleInclude Source="avares://Hydrogen/TemplatedControls/MenuButtonControl.axaml"></StyleInclude>
     </Application.Styles>
 </Application>

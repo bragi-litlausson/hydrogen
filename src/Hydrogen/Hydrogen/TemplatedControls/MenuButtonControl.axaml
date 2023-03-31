@@ -1,0 +1,35 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:Hydrogen.TemplatedControls">
+    <Design.PreviewWith>
+        <controls:MenuButtonControl />
+    </Design.PreviewWith>
+
+    <Style Selector="Button">
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Foreground" Value="{DynamicResource Primary75Brush}" />
+        <Setter Property="Background" Value="Transparent"></Setter>
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="FontFamily" Value="{DynamicResource RegularFont}" />
+    </Style>
+    <Style Selector="Button:pointerover /template/ ContentPresenter">
+        <Setter Property="Foreground" Value="{DynamicResource Primary50Brush}" />
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+    <Style Selector="Button:pressed /template/ ContentPresenter">
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryBrush}" />
+        <Setter Property="Background" Value="Transparent" />
+    </Style>
+    
+    
+    <Style Selector="controls|MenuButtonControl">
+        <!-- Set Defaults -->
+        <Setter Property="Template">
+            <ControlTemplate>
+                    <Button Background="Transparent"
+                               Margin="0"
+                               Content="{TemplateBinding Text}"/>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>
