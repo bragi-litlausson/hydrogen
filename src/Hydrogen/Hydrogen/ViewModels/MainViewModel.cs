@@ -1,6 +1,27 @@
-﻿namespace Hydrogen.ViewModels;
+﻿using System;
+using System.Collections.Generic;
+using CommunityToolkit.Mvvm.ComponentModel;
+using Hydrogen.Models;
 
-public class MainViewModel : ViewModelBase
+namespace Hydrogen.ViewModels;
+
+public partial class MainViewModel : ViewModelBase
 {
-    public string Greeting => "Welcome to Avalonia!";
+    [ObservableProperty] private ViewModelBase? _currentPage;
+
+    public void LoadFirstPage()
+    {
+        CurrentPage = ConstructTestHorizontalMenuViewModel();
+    }
+
+    private static ViewModelBase ConstructTestHorizontalMenuViewModel()
+    {
+        List<ButtonModel> buttons = new List<ButtonModel>
+        {
+            new("Option1", () => Console.WriteLine("Click 1")),
+            new("Option2", () => Console.WriteLine("Click 2")),
+        };
+
+        return new HorizontalMenuViewModel("Test menu", buttons);
+    }
 }
