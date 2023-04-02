@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using Hydrogen.Models;

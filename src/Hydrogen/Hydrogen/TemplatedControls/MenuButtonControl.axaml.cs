@@ -1,6 +1,5 @@
 using System;
 using Avalonia;
-using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 using CommunityToolkit.Mvvm.Input;
 using Hydrogen.Models;
