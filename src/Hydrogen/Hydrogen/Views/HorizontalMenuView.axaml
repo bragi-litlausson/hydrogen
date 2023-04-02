@@ -2,9 +2,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:Hydrogen.ViewModels"
              xmlns:templatedControls="clr-namespace:Hydrogen.TemplatedControls"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
-             x:Class="Hydrogen.Views.HorizontalMenuView">
+             x:Class="Hydrogen.Views.HorizontalMenuView"
+             x:CompileBindings="True"
+             x:DataType="viewModels:HorizontalMenuViewModel">
     <Grid RowDefinitions="6*, 2*, *" ColumnDefinitions="*"
           Background="{DynamicResource DarkBrush}">
 
@@ -17,9 +20,8 @@
                      HorizontalAlignment="Left">
                 <TextBlock Name="Title"
                            FontFamily="{DynamicResource BoldFont}"
-                           Foreground="{DynamicResource PrimaryBrush}">
-                    Hydrogen
-                </TextBlock>
+                           Foreground="{DynamicResource PrimaryBrush}"
+                           Text="{Binding Title}"/>
             </Viewbox>
 
             <!-- Options -->
@@ -28,19 +30,19 @@
                   ColumnDefinitions="2*, *, 2*, *, 2*, *, 2*, *">
             <Viewbox Grid.Column="0"
                      Stretch="Uniform">
-                <templatedControls:MenuButtonControl Grid.Row="2" />
+                <templatedControls:MenuButtonControl Name="Option0"/>
             </Viewbox>
             <Viewbox Grid.Column="2"
                      Stretch="Uniform">
-                <templatedControls:MenuButtonControl Grid.Row="2" />
+                <templatedControls:MenuButtonControl Name="Option1"/>
             </Viewbox>
             <Viewbox Grid.Column="4"
                      Stretch="Uniform">
-                <templatedControls:MenuButtonControl Grid.Row="2" />
+                <templatedControls:MenuButtonControl Name="Option2"/>
             </Viewbox>
             <Viewbox Grid.Column="6"
                      Stretch="Uniform">
-                <templatedControls:MenuButtonControl Grid.Row="2" />
+                <templatedControls:MenuButtonControl Name="Option3"/>
             </Viewbox>
             </Grid>
         </Grid>
