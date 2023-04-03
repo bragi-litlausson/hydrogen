@@ -30,9 +30,9 @@ public abstract class MenuViewBase<TDataContext> : UserControl
         {
             case 0:
                 throw new ArgumentOutOfRangeException("buttonModels.Count",
-                    "Vertical menu requires at least one button model");
+                    "Menu requires at least one button model");
             case > 4:
-                throw new ArgumentOutOfRangeException("buttonModels.Count", "Vertical menu supports up to 4 buttons");
+                throw new ArgumentOutOfRangeException("buttonModels.Count", "Menu supports up to 4 buttons");
         }
     }
 
