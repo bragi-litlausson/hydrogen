@@ -3,14 +3,9 @@ using Hydrogen.Models;
 
 namespace Hydrogen.ViewModels;
 
-public sealed class HorizontalMenuViewModel : ViewModelBase
+public sealed class HorizontalMenuViewModel : MenuViewModelBase
 {
-    public HorizontalMenuViewModel(string title, List<ButtonModel> buttonModels)
+    public HorizontalMenuViewModel(string title, List<ButtonModel> buttonModels) : base(title, buttonModels)
     {
-        Title = title;
-        ButtonModels = buttonModels;
     }
-
-    public string Title { get; init; } = "Horizontal Menu";
-    public List<ButtonModel> ButtonModels { get; init; }
 }
