@@ -11,7 +11,7 @@ public partial class MenuButtonControl : TemplatedControl
     public static readonly StyledProperty<string> TextProperty = AvaloniaProperty.Register<MenuButtonControl, string>(
         nameof(Text), "Hydrogen");
 
-    private Action _onClick;
+    private Action? _onClick;
     
     public string Text
     {
