@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace Hydrogen.ViewModels;
+namespace Hydrogen.Core;
 
 public class ViewModel : ObservableObject
 {

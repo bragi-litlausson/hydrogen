@@ -1,5 +1,3 @@
-using Hydrogen.ViewModels;
-
 namespace Hydrogen.Core.Modules.UIManagement;
 
 public abstract class PageViewModel : ViewModel
