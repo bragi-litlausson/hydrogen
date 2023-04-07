@@ -13,8 +13,13 @@ namespace Hydrogen.ViewModels;
 public partial class MainViewModel : ViewModel, IPageManager
 {
     [ObservableProperty] private ViewModel? _currentPage;
-
+    
     private readonly Stack<IPageDefinition> _pageHistory = new();
+    
+    /// <summary>
+    /// Stores page definition to add to page history stack on transition
+    /// </summary>
+    private IPageDefinition? _currentDefinition;
 
     public void LoadFirstPage()
     {
@@ -26,12 +31,18 @@ public partial class MainViewModel : ViewModel, IPageManager
         var viewModel = pageDefinition.ConstructViewModel(this);
         CurrentPage = viewModel;
         
-        if(addToHistory) _pageHistory.Push(pageDefinition);
+        
+        if(_currentDefinition is not null) _pageHistory.Push(_currentDefinition);
+        if(addToHistory) _currentDefinition = pageDefinition;
     }
 
     public void MoveBack()
     {
-        MoveTo(_pageHistory.Pop(), false);
+        _currentDefinition = _pageHistory.Pop();
+        
+        MoveTo(_currentDefinition, false);
+        
+        _currentDefinition = null;
     }
 
     public bool CanMoveBack()
