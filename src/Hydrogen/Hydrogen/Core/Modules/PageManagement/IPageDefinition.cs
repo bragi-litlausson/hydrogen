@@ -1,4 +1,4 @@
-namespace Hydrogen.Core.Modules.UIManagement;
+namespace Hydrogen.Core.Modules.PageManagement;
 
 public interface IPageDefinition
 {

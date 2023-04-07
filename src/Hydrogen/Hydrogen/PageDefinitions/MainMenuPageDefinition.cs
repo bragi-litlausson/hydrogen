@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Hydrogen.Core.Modules.UIManagement;
-using Hydrogen.Models;
+using Hydrogen.Core.Modules.PageManagement;
+using Hydrogen.Core.Modules.UI.Pages;
+using Hydrogen.Core.Modules.UI.TemplatedControls.Models;
 using Hydrogen.ViewModels;
 
 namespace Hydrogen.PageDefinitions;

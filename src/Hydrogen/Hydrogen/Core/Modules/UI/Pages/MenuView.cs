@@ -1,13 +1,13 @@
 using System;
 using System.Collections;
 using Avalonia.Controls;
-using Hydrogen.Models;
-using Hydrogen.TemplatedControls;
+using Hydrogen.Core.Modules.UI.TemplatedControls;
+using Hydrogen.Core.Modules.UI.TemplatedControls.Models;
 using Hydrogen.ViewModels;
 
-namespace Hydrogen.Views;
+namespace Hydrogen.Core.Modules.UI.Pages;
 
-public abstract class MenuViewBase<TDataContext> : UserControl 
+public abstract class MenuView<TDataContext> : UserControl 
     where TDataContext : MenuViewModel
 {
     protected override void OnDataContextChanged(EventArgs e)

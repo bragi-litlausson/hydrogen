@@ -4,8 +4,7 @@ using Avalonia;
 using Avalonia.Controls;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Hydrogen.Core;
-using Hydrogen.Core.Modules.UIManagement;
-using Hydrogen.Models;
+using Hydrogen.Core.Modules.PageManagement;
 using Hydrogen.PageDefinitions;
 
 namespace Hydrogen.ViewModels;
