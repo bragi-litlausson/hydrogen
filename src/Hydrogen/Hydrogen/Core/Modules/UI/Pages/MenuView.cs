@@ -7,7 +7,7 @@ using Hydrogen.ViewModels;
 
 namespace Hydrogen.Core.Modules.UI.Pages;
 
-public abstract class MenuView<TDataContext> : UserControl 
+public abstract class MenuView<TDataContext> : UserControl
     where TDataContext : MenuViewModel
 {
     protected override void OnDataContextChanged(EventArgs e)
@@ -39,6 +39,9 @@ public abstract class MenuView<TDataContext> : UserControl
     private void InstantiateButton(int index, ButtonModel buttonModel)
     {
         var button = FindButtonControl(index);
+
+        if (button is null) throw new ApplicationException($"Couldn't find button {index}");
+
         button.Setup(buttonModel);
     }
 
@@ -47,9 +50,12 @@ public abstract class MenuView<TDataContext> : UserControl
         for (var i = firstUnusedIndex; i < 4; i++)
         {
             var button = FindButtonControl(i);
+
+            if (button is null) throw new ApplicationException($"Couldn't find button {i}");
+
             button.Setup(null);
         }
     }
 
-    private MenuButtonControl FindButtonControl(int index) => this.FindControl<MenuButtonControl>($"Option{index}");
+    private MenuButtonControl? FindButtonControl(int index) => this.FindControl<MenuButtonControl>($"Option{index}");
 }
