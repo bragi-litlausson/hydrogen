@@ -5,16 +5,16 @@ using Hydrogen.Models;
 
 namespace Hydrogen.ViewModels;
 
-public partial class MainViewModel : ViewModelBase
+public partial class MainViewModel : ViewModel
 {
-    [ObservableProperty] private ViewModelBase? _currentPage;
+    [ObservableProperty] private ViewModel? _currentPage;
 
     public void LoadFirstPage()
     {
         CurrentPage = ConstructTestHorizontalMenuViewModel();
     }
 
-    private static ViewModelBase ConstructTestHorizontalMenuViewModel()
+    private static ViewModel ConstructTestHorizontalMenuViewModel()
     {
         List<ButtonModel> buttons = new List<ButtonModel>
         {

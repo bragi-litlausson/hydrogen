@@ -2,7 +2,7 @@ using Hydrogen.ViewModels;
 
 namespace Hydrogen.Core.Modules.UIManagement;
 
-public abstract class PageViewModel : ViewModelBase
+public abstract class PageViewModel : ViewModel
 {
     protected IPageManager _pageManager;
 

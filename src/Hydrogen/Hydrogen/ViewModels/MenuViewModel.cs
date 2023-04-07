@@ -4,11 +4,11 @@ using Hydrogen.Models;
 
 namespace Hydrogen.ViewModels;
 
-public abstract partial class MenuViewModelBase : ViewModelBase
+public abstract partial class MenuViewModel : ViewModel
 {
     [ObservableProperty] private string _title;
 
-    public MenuViewModelBase(string title, List<ButtonModel> buttonModels)
+    public MenuViewModel(string title, List<ButtonModel> buttonModels)
     {
         _title = title;
         ButtonModels = buttonModels;

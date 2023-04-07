@@ -8,7 +8,7 @@ using Hydrogen.ViewModels;
 namespace Hydrogen.Views;
 
 public abstract class MenuViewBase<TDataContext> : UserControl 
-    where TDataContext : MenuViewModelBase
+    where TDataContext : MenuViewModel
 {
     protected override void OnDataContextChanged(EventArgs e)
     {
