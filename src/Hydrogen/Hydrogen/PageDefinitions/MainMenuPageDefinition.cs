@@ -14,6 +14,8 @@ public sealed class MainMenuPageDefinition : IPageDefinition
         List<ButtonModel> buttons = new()
         {
             new("Vertical Menu", () => pageManager.MoveTo(new PauseMenuPageDefinition())),
+            new("Click! ", ()=>Console.WriteLine("Click Tested!")),
+            new("Click test", ()=>Console.WriteLine("Click Tested!")),
             new("Click test", ()=>Console.WriteLine("Click Tested!")),
         };
         

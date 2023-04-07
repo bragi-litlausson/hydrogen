@@ -15,7 +15,7 @@
 
         <!-- Content -->
         <Grid Grid.Column="0" Grid.Row="1"
-              RowDefinitions="*, *"
+              RowDefinitions="2*, *"
               ColumnDefinitions="*, 10*, *">
             <!-- Title -->
             <Viewbox Grid.Column="1" Grid.Row="0"
@@ -29,10 +29,10 @@
             <!-- Options -->
             <Grid Name="Options"
                   Grid.Column="1" Grid.Row="1"
-                  ColumnDefinitions="2*, *, 2*, *, 2*, *, 2*, *">
+                  ColumnDefinitions="Auto, *, Auto, *, Auto, *, Auto, *">
             <Viewbox Grid.Column="0"
                      Stretch="Uniform">
-                <templatedControls1:MenuButtonControl Name="Option0"/>
+                <templatedControls1:MenuButtonControl Name="Option0" Text="Vertical Test"/>
             </Viewbox>
             <Viewbox Grid.Column="2"
                      Stretch="Uniform">
