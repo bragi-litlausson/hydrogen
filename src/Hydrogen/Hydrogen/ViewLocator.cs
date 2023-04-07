@@ -1,7 +1,7 @@
 using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using Hydrogen.ViewModels;
+using Hydrogen.Core;
 
 namespace Hydrogen;
 
@@ -24,6 +24,6 @@ public class ViewLocator : IDataTemplate
 
     public bool Match(object? data)
     {
-        return data is ViewModelBase;
+        return data is ViewModel;
     }
 }

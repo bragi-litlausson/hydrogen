@@ -1,27 +1,51 @@
 ﻿using System;
 using System.Collections.Generic;
+using Avalonia;
+using Avalonia.Controls;
 using CommunityToolkit.Mvvm.ComponentModel;
-using Hydrogen.Models;
+using Hydrogen.Core;
+using Hydrogen.Core.Modules.PageManagement;
+using Hydrogen.PageDefinitions;
 
 namespace Hydrogen.ViewModels;
 
-public partial class MainViewModel : ViewModelBase
+public partial class MainViewModel : ViewModel, IPageManager
 {
-    [ObservableProperty] private ViewModelBase? _currentPage;
+    [ObservableProperty] private ViewModel? _currentPage;
+    
+    private readonly Stack<IPageDefinition> _pageHistory = new();
+    
+    /// <summary>
+    /// Stores page definition to add to page history stack on transition
+    /// </summary>
+    private IPageDefinition? _currentDefinition;
 
     public void LoadFirstPage()
     {
-        CurrentPage = ConstructTestHorizontalMenuViewModel();
+        MoveTo(new MainMenuPageDefinition());
     }
 
-    private static ViewModelBase ConstructTestHorizontalMenuViewModel()
+    public void MoveTo(IPageDefinition pageDefinition, bool addToHistory = true)
     {
-        List<ButtonModel> buttons = new List<ButtonModel>
-        {
-            new("Option1", () => Console.WriteLine("Click 1")),
-            new("Option2", () => Console.WriteLine("Click 2")),
-        };
+        var viewModel = pageDefinition.ConstructViewModel(this);
+        CurrentPage = viewModel;
+        
+        
+        if(_currentDefinition is not null) _pageHistory.Push(_currentDefinition);
+        if(addToHistory) _currentDefinition = pageDefinition;
+    }
 
-        return new HorizontalMenuViewModel("Test menu", buttons);
+    public void MoveBack()
+    {
+        _currentDefinition = _pageHistory.Pop();
+        
+        MoveTo(_currentDefinition, false);
+        
+        _currentDefinition = null;
+    }
+
+    public bool CanMoveBack()
+    {
+        return _pageHistory.Count != 0;
     }
 }

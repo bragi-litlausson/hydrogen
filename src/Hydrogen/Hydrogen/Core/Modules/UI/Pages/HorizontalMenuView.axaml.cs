@@ -1,9 +1,8 @@
 using Avalonia.Markup.Xaml;
-using Hydrogen.ViewModels;
 
-namespace Hydrogen.Views;
+namespace Hydrogen.Core.Modules.UI.Pages;
 
-public sealed partial class HorizontalMenuView : MenuViewBase<HorizontalMenuViewModel>
+public sealed partial class HorizontalMenuView : MenuView<HorizontalMenuViewModel>
 {
     public HorizontalMenuView()
     {

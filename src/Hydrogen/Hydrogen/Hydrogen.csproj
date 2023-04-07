@@ -18,4 +18,19 @@
         <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.0-preview6" />
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0-preview2" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Core\Modules\UI\TemplatedControls\MenuButtonControl.axaml.cs">
+        <DependentUpon>MenuButtonControl.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Core\Modules\UI\Pages\HorizontalMenuView.axaml.cs">
+        <DependentUpon>HorizontalMenuView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Core\Modules\UI\Pages\VerticalMenuView.axaml.cs">
+        <DependentUpon>VerticalMenuView.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
 </Project>

@@ -1,9 +1,10 @@
 ﻿using System.Runtime.Versioning;
 using Avalonia;
 using Avalonia.Browser;
-using Hydrogen;
 
 [assembly: SupportedOSPlatform("browser")]
+
+namespace Hydrogen.Browser;
 
 internal partial class Program
 {

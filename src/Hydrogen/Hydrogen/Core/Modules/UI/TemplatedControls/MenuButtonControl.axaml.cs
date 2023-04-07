@@ -2,9 +2,9 @@ using System;
 using Avalonia;
 using Avalonia.Controls.Primitives;
 using CommunityToolkit.Mvvm.Input;
-using Hydrogen.Models;
+using Hydrogen.Core.Modules.UI.TemplatedControls.Models;
 
-namespace Hydrogen.TemplatedControls;
+namespace Hydrogen.Core.Modules.UI.TemplatedControls;
 
 public partial class MenuButtonControl : TemplatedControl
 {
