@@ -12,7 +12,7 @@ public sealed class MainMenuPageDefinition : IPageDefinition
     {
         List<ButtonModel> buttons = new()
         {
-            new("Vertical Menu", () => pageManager.MoveTo(null)),
+            new("Vertical Menu", () => pageManager.MoveTo(new PauseMenuPageDefinition())),
             new("Click test", ()=>Console.WriteLine("Click Tested!")),
         };
         
