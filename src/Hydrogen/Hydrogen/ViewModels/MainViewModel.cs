@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Hydrogen.Core;
+using Hydrogen.Core.Modules.EventSystem;
 using Hydrogen.Core.Modules.PageManagement;
 using Hydrogen.PageDefinitions;
 
@@ -16,11 +17,13 @@ public partial class MainViewModel : ViewModel, IPageManager
     /// Stores page definition to add to page history stack on transition
     /// </summary>
     private IPageDefinition? _currentDefinition;
-    private IServiceManager _serviceManager;
+    private readonly IServiceManager _serviceManager;
+    private readonly IMessageService _messageService;
 
     public MainViewModel(IServiceManager serviceManager)
     {
         _serviceManager = serviceManager;
+        _messageService = _serviceManager.RetrieveService<IMessageService>();
     }
 
     public void LoadFirstPage()
@@ -31,8 +34,10 @@ public partial class MainViewModel : ViewModel, IPageManager
     public void MoveTo(IPageDefinition pageDefinition, bool addToHistory = true)
     {
         var viewModel = pageDefinition.ConstructViewModel(this, _serviceManager);
-        CurrentPage = viewModel;
         
+        ReleaseViewModel();
+        CurrentPage = viewModel;
+        RegisterViewModel();
         
         if(_currentDefinition is not null) _pageHistory.Push(_currentDefinition);
         if(addToHistory) _currentDefinition = pageDefinition;
@@ -50,5 +55,19 @@ public partial class MainViewModel : ViewModel, IPageManager
     public bool CanMoveBack()
     {
         return _pageHistory.Count != 0;
+    }
+
+    private void ReleaseViewModel()
+    {
+        if(CurrentPage is not IMessageReceiver messageReceiver) return;
+        
+        _messageService.RemoveReceiver(messageReceiver);
+    }
+
+    private void RegisterViewModel()
+    {
+        if(CurrentPage is not IMessageReceiver messageReceiver) return;
+        
+        _messageService.RegisterReceiver(messageReceiver);
     }
 }

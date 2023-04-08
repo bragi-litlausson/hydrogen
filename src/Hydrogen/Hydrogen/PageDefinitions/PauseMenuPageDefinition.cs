@@ -23,7 +23,6 @@ public sealed class PauseMenuPageDefinition : IPageDefinition
        };
 
        var viewModel = new VerticalMenuViewModel("Pause", buttons, pageManager);
-       messageSystem.RegisterReceiver(viewModel);
        return viewModel;
     }
 
