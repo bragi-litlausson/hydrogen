@@ -1,8 +1,8 @@
 namespace Hydrogen.Core.Modules.EventSystem;
 
-public interface IEvent
+public interface IMessage
 {
-    public EventType Type { get; }
+    public MessageType Type { get; }
     public bool Solved { get; }
 
     void MarkAsSolved();

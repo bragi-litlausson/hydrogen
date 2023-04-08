@@ -1,6 +1,6 @@
 namespace Hydrogen.Core.Modules.EventSystem;
 
-public enum EventType
+public enum MessageType
 {
     Input = 0,
     Render = 1,
