@@ -6,8 +6,8 @@ namespace Hydrogen.Core.Modules.EventSystem;
 
 public sealed class MessageSystem : IMessageSystem
 {
-    private List<IMessageReceiver> _receivers;
-    private Queue<IMessage> _eventQueue;
+    private readonly List<IMessageReceiver> _receivers = new();
+    private readonly Queue<IMessage> _eventQueue = new();
     
     public void RegisterReceiver(IMessageReceiver messageReceiver)
     {
