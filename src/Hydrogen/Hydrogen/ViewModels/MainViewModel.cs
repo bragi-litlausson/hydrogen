@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Avalonia;
-using Avalonia.Controls;
+﻿using System.Collections.Generic;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Hydrogen.Core;
 using Hydrogen.Core.Modules.PageManagement;
@@ -19,6 +16,12 @@ public partial class MainViewModel : ViewModel, IPageManager
     /// Stores page definition to add to page history stack on transition
     /// </summary>
     private IPageDefinition? _currentDefinition;
+    private IServiceManager _serviceManager;
+
+    public MainViewModel(IServiceManager serviceManager)
+    {
+        _serviceManager = serviceManager;
+    }
 
     public void LoadFirstPage()
     {
@@ -27,7 +30,7 @@ public partial class MainViewModel : ViewModel, IPageManager
 
     public void MoveTo(IPageDefinition pageDefinition, bool addToHistory = true)
     {
-        var viewModel = pageDefinition.ConstructViewModel(this);
+        var viewModel = pageDefinition.ConstructViewModel(this, _serviceManager);
         CurrentPage = viewModel;
         
         

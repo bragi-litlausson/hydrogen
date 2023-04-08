@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using CommunityToolkit.Mvvm.ComponentModel;
-using Hydrogen.Core;
 using Hydrogen.Core.Modules.PageManagement;
 using Hydrogen.Core.Modules.UI.TemplatedControls.Models;
 

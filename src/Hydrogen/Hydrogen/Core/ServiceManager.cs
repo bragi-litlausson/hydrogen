@@ -17,6 +17,16 @@ public sealed class ServiceManager : IServiceManager
         _services[service.GetType()] = service;
     }
 
+    public void RegisterService<TInterface>(IService service) where TInterface : IService
+    {
+        if(_services.ContainsKey(typeof(TInterface)))
+        {
+            throw new ArgumentException($"{service.GetType()} already registered");
+        }
+
+        _services[typeof(TInterface)] = service;
+    }
+
     public void RemoveService(IService service)
     {
         if (!_services.ContainsKey(service.GetType()))
@@ -27,8 +37,18 @@ public sealed class ServiceManager : IServiceManager
         _services.Remove(service.GetType());
     }
 
-    public IService? RetrieveService<TService>() where TService : class, IService
+    public void RemoveService<TInterface>()
     {
-        return !_services.ContainsKey(typeof(TService)) ? null : _services[typeof(TService)];
+        if (!_services.ContainsKey(typeof(TInterface)))
+        {
+            throw new ArgumentException($"{typeof(TInterface)} not found");
+        }
+
+        _services.Remove(typeof(TInterface));
+    }
+
+    public TService? RetrieveService<TService>() where TService : class, IService
+    {
+        return !_services.ContainsKey(typeof(TService)) ? null : _services[typeof(TService)] as TService;
     }
 }

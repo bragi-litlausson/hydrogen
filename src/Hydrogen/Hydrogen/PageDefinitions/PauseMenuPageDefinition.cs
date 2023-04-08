@@ -1,39 +1,32 @@
 using System;
 using System.Collections.Generic;
+using Hydrogen.Core;
 using Hydrogen.Core.Modules.EventSystem;
 using Hydrogen.Core.Modules.PageManagement;
 using Hydrogen.Core.Modules.UI.Pages;
 using Hydrogen.Core.Modules.UI.TemplatedControls.Models;
-using Hydrogen.ViewModels;
 
 namespace Hydrogen.PageDefinitions;
 
-public sealed class PauseMenuPageDefinition : IPageDefinition, IMessageReceiver
+public sealed class PauseMenuPageDefinition : IPageDefinition
 {
-    private IMessageSystem? _messageSystem;
 
-    public PageViewModel ConstructViewModel(IPageManager pageManager)
+    public PageViewModel ConstructViewModel(IPageManager pageManager, IServiceManager serviceManager)
     {
-        _messageSystem ??= new MessageSystem();
+        var messageSystem = serviceManager.RetrieveService<IMessageService>() ?? throw new ArgumentNullException("serviceManager.RetrieveService<IMessageService>()");
         
-        _messageSystem.RegisterReceiver(this);
        var buttons = new List<ButtonModel>
        {
            new("Move Back", pageManager.MoveBack),
            new("Test Click", () => Console.WriteLine("This also works!")),
-           new("Msg Test", () => _messageSystem.Send(new MessageTest())),
+           new("Msg Test", () => messageSystem.Send(new MessageTest())),
        };
 
-       return new VerticalMenuViewModel("Pause", buttons, pageManager);
+       var viewModel = new VerticalMenuViewModel("Pause", buttons, pageManager);
+       messageSystem.RegisterReceiver(viewModel);
+       return viewModel;
     }
 
     // Only for testing purposes, definition should handle events
-    private record MessageTest() : Message(MessageType.Application)
-    {
-    }
-
-    public void OnEventReceived(IMessage message)
-    {
-        Console.WriteLine(message.ToString());
-    }
+    private record MessageTest() : Message(MessageType.Application);
 }

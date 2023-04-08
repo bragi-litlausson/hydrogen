@@ -3,6 +3,8 @@ namespace Hydrogen.Core;
 public interface IServiceManager
 {
     void RegisterService(IService service);
+    void RegisterService<TInterface>(IService service) where TInterface : IService;
     void RemoveService(IService service);
-    IService? RetrieveService<TService>() where TService : class, IService;
+    void RemoveService<TInterface>();
+    TService? RetrieveService<TService>() where TService : class, IService;
 }
