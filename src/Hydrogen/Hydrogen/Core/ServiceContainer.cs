@@ -1,11 +1,19 @@
 using System;
 using System.Collections.Generic;
+using Hydrogen.Core.Modules.EventSystem;
 
 namespace Hydrogen.Core;
 
-public sealed class ServiceManager : IServiceManager
+public sealed class ServiceContainer : IServiceContainer
 {
     private readonly Dictionary<Type, IService> _services = new();
+    private readonly IMessageService _messageService;
+
+    public ServiceContainer(IMessageService messageService)
+    {
+        _messageService = messageService;
+        _services[typeof(IMessageService)] = messageService;
+    }
     
     public void RegisterService(IService service)
     {
@@ -14,6 +22,8 @@ public sealed class ServiceManager : IServiceManager
             throw new ArgumentException($"{service.GetType()} already registered");
         }
 
+        if(service is IMessageReceiver receiver) _messageService.RegisterReceiver(receiver); 
+        
         _services[service.GetType()] = service;
     }
 

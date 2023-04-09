@@ -17,13 +17,13 @@ public partial class MainViewModel : ViewModel, IPageManager
     /// Stores page definition to add to page history stack on transition
     /// </summary>
     private IPageDefinition? _currentDefinition;
-    private readonly IServiceManager _serviceManager;
+    private readonly IServiceContainer _serviceContainer;
     private readonly IMessageService _messageService;
 
-    public MainViewModel(IServiceManager serviceManager)
+    public MainViewModel(IServiceContainer serviceContainer)
     {
-        _serviceManager = serviceManager;
-        _messageService = _serviceManager.RetrieveService<IMessageService>();
+        _serviceContainer = serviceContainer;
+        _messageService = _serviceContainer.RetrieveService<IMessageService>();
     }
 
     public void LoadFirstPage()
@@ -33,7 +33,7 @@ public partial class MainViewModel : ViewModel, IPageManager
 
     public void MoveTo(IPageDefinition pageDefinition, bool addToHistory = true)
     {
-        var viewModel = pageDefinition.ConstructViewModel(this, _serviceManager);
+        var viewModel = pageDefinition.ConstructViewModel(this, _serviceContainer);
         
         ReleaseViewModel();
         CurrentPage = viewModel;

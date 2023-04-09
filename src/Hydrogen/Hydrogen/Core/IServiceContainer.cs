@@ -1,6 +1,6 @@
 namespace Hydrogen.Core;
 
-public interface IServiceManager
+public interface IServiceContainer
 {
     void RegisterService(IService service);
     void RegisterService<TInterface>(IService service) where TInterface : IService;

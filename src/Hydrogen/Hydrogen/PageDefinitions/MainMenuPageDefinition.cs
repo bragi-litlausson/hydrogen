@@ -9,7 +9,7 @@ namespace Hydrogen.PageDefinitions;
 
 public sealed class MainMenuPageDefinition : IPageDefinition
 {
-    public PageViewModel ConstructViewModel(IPageManager pageManager, IServiceManager serviceManager)
+    public PageViewModel ConstructViewModel(IPageManager pageManager, IServiceContainer serviceContainer)
     {
         List<ButtonModel> buttons = new()
         {

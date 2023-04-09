@@ -36,12 +36,11 @@ public partial class App : Application
         base.OnFrameworkInitializationCompleted();
     }
 
-    private IServiceManager InitializeServices()
+    private IServiceContainer InitializeServices()
     {
-        var serviceManager = new ServiceManager();
+        var messageService = new MessageService();
+        var serviceManager = new ServiceContainer(messageService);
 
-        serviceManager.RegisterService<IMessageService>(new MessageService());
-        
         return serviceManager;
     }
 }

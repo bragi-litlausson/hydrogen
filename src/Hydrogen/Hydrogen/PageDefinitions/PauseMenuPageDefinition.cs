@@ -11,9 +11,9 @@ namespace Hydrogen.PageDefinitions;
 public sealed class PauseMenuPageDefinition : IPageDefinition
 {
 
-    public PageViewModel ConstructViewModel(IPageManager pageManager, IServiceManager serviceManager)
+    public PageViewModel ConstructViewModel(IPageManager pageManager, IServiceContainer serviceContainer)
     {
-        var messageSystem = serviceManager.RetrieveService<IMessageService>() ?? throw new ArgumentNullException("serviceManager.RetrieveService<IMessageService>()");
+        var messageSystem = serviceContainer.RetrieveService<IMessageService>() ?? throw new ArgumentNullException("serviceManager.RetrieveService<IMessageService>()");
         
        var buttons = new List<ButtonModel>
        {

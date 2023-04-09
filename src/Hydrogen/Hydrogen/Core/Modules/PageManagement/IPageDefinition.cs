@@ -2,5 +2,5 @@ namespace Hydrogen.Core.Modules.PageManagement;
 
 public interface IPageDefinition
 {
-    PageViewModel ConstructViewModel(IPageManager pageManager, IServiceManager serviceManager);
+    PageViewModel ConstructViewModel(IPageManager pageManager, IServiceContainer serviceContainer);
 }
