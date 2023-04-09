@@ -2,6 +2,6 @@
 
 namespace Hydrogen.Core;
 
-public class ViewModel : ObservableObject
+public abstract class ViewModel : ObservableObject
 {
 }

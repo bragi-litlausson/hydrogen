@@ -4,7 +4,7 @@ using Hydrogen.Core.Extensions;
 
 namespace Hydrogen.Core.Modules.EventSystem;
 
-public sealed class MessageSystem : IMessageSystem
+public sealed class MessageService : IMessageService
 {
     private readonly List<IMessageReceiver> _receivers = new();
     private readonly Queue<IMessage> _eventQueue = new();

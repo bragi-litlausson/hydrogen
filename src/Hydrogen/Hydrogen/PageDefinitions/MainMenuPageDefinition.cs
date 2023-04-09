@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
+using Hydrogen.Core;
 using Hydrogen.Core.Modules.PageManagement;
 using Hydrogen.Core.Modules.UI.Pages;
 using Hydrogen.Core.Modules.UI.TemplatedControls.Models;
-using Hydrogen.ViewModels;
 
 namespace Hydrogen.PageDefinitions;
 
 public sealed class MainMenuPageDefinition : IPageDefinition
 {
-    public PageViewModel ConstructViewModel(IPageManager pageManager)
+    public PageViewModel ConstructViewModel(IPageManager pageManager, IServiceContainer serviceContainer)
     {
         List<ButtonModel> buttons = new()
         {

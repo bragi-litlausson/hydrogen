@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using Avalonia;
-using Avalonia.Controls;
+﻿using System.Collections.Generic;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Hydrogen.Core;
+using Hydrogen.Core.Modules.EventSystem;
 using Hydrogen.Core.Modules.PageManagement;
 using Hydrogen.PageDefinitions;
 
@@ -19,6 +17,14 @@ public partial class MainViewModel : ViewModel, IPageManager
     /// Stores page definition to add to page history stack on transition
     /// </summary>
     private IPageDefinition? _currentDefinition;
+    private readonly IServiceContainer _serviceContainer;
+    private readonly IMessageService _messageService;
+
+    public MainViewModel(IServiceContainer serviceContainer)
+    {
+        _serviceContainer = serviceContainer;
+        _messageService = _serviceContainer.RetrieveService<IMessageService>();
+    }
 
     public void LoadFirstPage()
     {
@@ -27,9 +33,11 @@ public partial class MainViewModel : ViewModel, IPageManager
 
     public void MoveTo(IPageDefinition pageDefinition, bool addToHistory = true)
     {
-        var viewModel = pageDefinition.ConstructViewModel(this);
-        CurrentPage = viewModel;
+        var viewModel = pageDefinition.ConstructViewModel(this, _serviceContainer);
         
+        ReleaseViewModel();
+        CurrentPage = viewModel;
+        RegisterViewModel();
         
         if(_currentDefinition is not null) _pageHistory.Push(_currentDefinition);
         if(addToHistory) _currentDefinition = pageDefinition;
@@ -47,5 +55,19 @@ public partial class MainViewModel : ViewModel, IPageManager
     public bool CanMoveBack()
     {
         return _pageHistory.Count != 0;
+    }
+
+    private void ReleaseViewModel()
+    {
+        if(CurrentPage is not IMessageReceiver messageReceiver) return;
+        
+        _messageService.RemoveReceiver(messageReceiver);
+    }
+
+    private void RegisterViewModel()
+    {
+        if(CurrentPage is not IMessageReceiver messageReceiver) return;
+        
+        _messageService.RegisterReceiver(messageReceiver);
     }
 }

@@ -1,6 +1,6 @@
 namespace Hydrogen.Core.Modules.EventSystem;
 
-public interface IMessageSystem
+public interface IMessageService : IService
 {
     void RegisterReceiver(IMessageReceiver messageReceiver);
     void RemoveReceiver(IMessageReceiver messageReceiver);
