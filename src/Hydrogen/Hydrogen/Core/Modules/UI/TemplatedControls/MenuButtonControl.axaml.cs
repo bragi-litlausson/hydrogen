@@ -3,6 +3,7 @@ using Avalonia;
 using Avalonia.Controls.Primitives;
 using CommunityToolkit.Mvvm.Input;
 using Hydrogen.Core.Modules.UI.TemplatedControls.Models;
+using Serilog;
 
 namespace Hydrogen.Core.Modules.UI.TemplatedControls;
 
@@ -23,6 +24,7 @@ public partial class MenuButtonControl : TemplatedControl
     {
         if (model is null)
         {
+            Log.Verbose($"MenuButtonControl: Hiding {Name}");
             IsVisible = false;
             return;
         }
@@ -34,6 +36,7 @@ public partial class MenuButtonControl : TemplatedControl
     [RelayCommand]
     private void Click()
     {
+        Log.Debug($"{Name} clicked");
         _onClick?.Invoke();
     }
 }

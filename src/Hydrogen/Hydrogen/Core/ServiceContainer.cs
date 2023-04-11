@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Hydrogen.Core.Modules.EventSystem;
+using Serilog;
 
 namespace Hydrogen.Core;
 
@@ -13,18 +14,20 @@ public sealed class ServiceContainer : IServiceContainer
     {
         _messageService = messageService;
         _services[typeof(IMessageService)] = messageService;
+        
     }
     
     public void RegisterService(IService service)
     {
         if (_services.ContainsKey(service.GetType()))
         {
-            throw new ArgumentException($"{service.GetType()} already registered");
+            throw new ArgumentException($"ServiceContainer: {service.GetType()} already registered");
         }
 
         if(service is IMessageReceiver receiver) _messageService.RegisterReceiver(receiver); 
         
         _services[service.GetType()] = service;
+        Log.Debug($"ServiceContainer: {service.GetType()} registered");
     }
 
     public void RegisterService<TInterface>(IService service) where TInterface : IService
@@ -35,6 +38,7 @@ public sealed class ServiceContainer : IServiceContainer
         }
 
         _services[typeof(TInterface)] = service;
+        Log.Debug($"ServiceContainer: {service.GetType()} registered as {typeof(TInterface)}");
     }
 
     public void RemoveService(IService service)
@@ -45,6 +49,7 @@ public sealed class ServiceContainer : IServiceContainer
         }
 
         _services.Remove(service.GetType());
+        Log.Debug($"ServiceContainer: {service.GetType()} removed");
     }
 
     public void RemoveService<TInterface>()
@@ -55,6 +60,7 @@ public sealed class ServiceContainer : IServiceContainer
         }
 
         _services.Remove(typeof(TInterface));
+        Log.Debug($"ServiceContainer: {typeof(TInterface)} removed");
     }
 
     public TService? RetrieveService<TService>() where TService : class, IService

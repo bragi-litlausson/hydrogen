@@ -4,6 +4,7 @@ using Hydrogen.Core;
 using Hydrogen.Core.Modules.PageManagement;
 using Hydrogen.Core.Modules.UI.Pages;
 using Hydrogen.Core.Modules.UI.TemplatedControls.Models;
+using Serilog;
 
 namespace Hydrogen.PageDefinitions;
 
@@ -11,6 +12,8 @@ public sealed class MainMenuPageDefinition : IPageDefinition
 {
     public PageViewModel ConstructViewModel(IPageManager pageManager, IServiceContainer serviceContainer)
     {
+        Log.Debug($"MainMenu Page Definition: Constructing ViewModel");
+        
         List<ButtonModel> buttons = new()
         {
             new("Vertical Menu", () => pageManager.MoveTo(new PauseMenuPageDefinition())),

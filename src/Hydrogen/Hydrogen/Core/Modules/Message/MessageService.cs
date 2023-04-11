@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using Hydrogen.Core.Extensions;
+using Serilog;
+using Serilog.Core;
 
 namespace Hydrogen.Core.Modules.EventSystem;
 
@@ -12,11 +14,13 @@ public sealed class MessageService : IMessageService
     public void RegisterReceiver(IMessageReceiver messageReceiver)
     {
         _receivers.Add(messageReceiver);
+        Log.Verbose($"Registered receiver {messageReceiver.GetType()}");
     }
 
     public void RemoveReceiver(IMessageReceiver messageReceiver)
     {
         _receivers.Remove(messageReceiver);
+        Log.Verbose($"Removed receiver {messageReceiver.GetType()}");
     }
 
     /// <summary>
@@ -27,6 +31,7 @@ public sealed class MessageService : IMessageService
     {
         if (message is null) throw new ArgumentNullException(nameof(message));
         
+        Log.Debug($"Sending {message}");
         _receivers.Foreach(e => e.OnEventReceived(message));
     }
 
@@ -40,5 +45,6 @@ public sealed class MessageService : IMessageService
         if (message is null) throw new ArgumentNullException(nameof(message));
         
         _eventQueue.Enqueue(message);
+        Log.Debug($"{message} added to the queue");
     }
 }
