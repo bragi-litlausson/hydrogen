@@ -4,6 +4,7 @@ using Avalonia.Controls;
 using Hydrogen.Core.Modules.UI.TemplatedControls;
 using Hydrogen.Core.Modules.UI.TemplatedControls.Models;
 using Hydrogen.ViewModels;
+using Serilog;
 
 namespace Hydrogen.Core.Modules.UI.Pages;
 
@@ -15,13 +16,29 @@ public abstract class MenuView<TDataContext> : UserControl
         base.OnDataContextChanged(e);
 
         if (DataContext is not TDataContext dataContext) return;
-
+        
         var buttonModels = dataContext.ButtonModels;
 
-        ValidateButtonModels(buttonModels);
+        try
+        {
+            ValidateButtonModels(buttonModels);
+        }
+        catch (Exception exception)
+        {
+            Log.Error(exception, $"{GetType().Name}: Button Models validation failed!");
+            throw;
+        }
 
-        for (var i = 0; i < buttonModels.Count; i++) InstantiateButton(i, buttonModels[i]);
-        if (buttonModels.Count < 4) HideUnusedButtons(buttonModels.Count);
+        try
+        {
+            for (var i = 0; i < buttonModels.Count; i++) InstantiateButton(i, buttonModels[i]);
+            if (buttonModels.Count < 4) HideUnusedButtons(buttonModels.Count);
+        }
+        catch (Exception exception)
+        {
+            Log.Error(exception, $"{GetType().Name}: Failed to set up button templates");
+            throw;
+        }
     }
 
     private void ValidateButtonModels(ICollection models)
@@ -34,6 +51,7 @@ public abstract class MenuView<TDataContext> : UserControl
             case > 4:
                 throw new ArgumentOutOfRangeException("buttonModels.Count", "Menu supports up to 4 buttons");
         }
+        Log.Debug($"{GetType()}:Button models validated");
     }
 
     private void InstantiateButton(int index, ButtonModel buttonModel)

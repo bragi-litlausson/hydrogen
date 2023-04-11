@@ -3,6 +3,7 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using Hydrogen.Core;
 using Hydrogen.Core.Modules.EventSystem;
+using Hydrogen.Core.Modules.Logging;
 using Hydrogen.ViewModels;
 using Hydrogen.Views;
 
@@ -35,9 +36,10 @@ public partial class App : Application
 
         base.OnFrameworkInitializationCompleted();
     }
-
+    
     private IServiceContainer InitializeServices()
     {
+        LoggerHelper.Initialize();
         var messageService = new MessageService();
         var serviceManager = new ServiceContainer(messageService);
 
