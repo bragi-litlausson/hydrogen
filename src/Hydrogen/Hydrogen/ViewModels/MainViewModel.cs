@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System;
+using System.Collections.Generic;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Hydrogen.Core;
 using Hydrogen.Core.Modules.EventSystem;
@@ -26,7 +26,9 @@ public partial class MainViewModel : ViewModel, IPageManager
     {
         Log.Verbose($"Main view model created");
         _serviceContainer = serviceContainer;
-        _messageService = _serviceContainer.RetrieveService<IMessageService>();
+        var messageService = _serviceContainer.RetrieveService<IMessageService>();
+
+        _messageService = messageService ?? throw new NullReferenceException("Message service not found!");
     }
 
     public void LoadFirstPage()

@@ -6,8 +6,6 @@ using Hydrogen.Core.Modules.EventSystem;
 using Hydrogen.Core.Modules.Logging;
 using Hydrogen.ViewModels;
 using Hydrogen.Views;
-using Serilog;
-using Serilog.Core;
 
 namespace Hydrogen;
 

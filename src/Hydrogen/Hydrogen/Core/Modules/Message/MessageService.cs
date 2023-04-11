@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using Hydrogen.Core.Extensions;
 using Serilog;
-using Serilog.Core;
 
 namespace Hydrogen.Core.Modules.EventSystem;
 
